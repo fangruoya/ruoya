@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Fang Ruoya | Campus Experiences </title>
+  <title>Fang Ruoya | Campus Experiences</title>
   <meta name="author" content="Fang Ruoya">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
@@ -13,6 +13,41 @@
     a, a * {
       cursor: url('images/icon/cursor-pointer.png'), pointer !important;
     }
+
+    /* ---- Scrolling photo strip ---- */
+    .campus-scroll {
+      overflow: hidden;
+      border-radius: 14px;
+      -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+              mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+    }
+    .campus-track {
+      display: flex;
+      gap: 12px;
+      width: max-content;
+      animation: campusScroll 22s linear infinite;
+    }
+    .campus-scroll:hover .campus-track { animation-play-state: paused; }
+    @keyframes campusScroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .campus-photo {
+      height: 150px;
+      width: 220px;
+      flex-shrink: 0;
+      object-fit: cover;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: rgba(90, 50, 10, 0.55);
+    }
+    .campus-photo.debate  { background: linear-gradient(135deg, #ffe9cc, #ffd19a); }
+    .campus-photo.running { background: linear-gradient(135deg, #d9ecff, #a9d3ff); }
   </style>
 </head>
 <body>
@@ -20,94 +55,120 @@
     <tr style="padding:0px">
       <td style="padding:0px">
 
-        <!-- 顶部导航:以后新增页面,复制这一行加链接即可 -->
+        <!-- Top navigation -->
         <div style="margin:18px 0 6px; font-size:14px;">
-          <a href="index.html" style="color:#ad7020; text-decoration:none;">← 主页 Home</a>
+          <a href="index.html" style="color:#ad7020; text-decoration:none;">← Home</a>
           <span style="margin:0 10px; color:#ccc;">|</span>
           <span style="font-weight:bold;">Campus Experiences</span>
         </div>
 
-        <!-- 页面标题 -->
+        <!-- Page title -->
         <p style="text-align:center; margin:12px 0 4px;">
-          <name>Campus Experiences </name>
+          <name>Campus Experiences</name>
         </p>
         <p style="text-align:center; color:#888; font-size:14px;">
-          Beyond the Classroom: Debating, Sports & Volunteer Service
+          Beyond the classroom — the teams, the training, and the moments that shaped my campus life.
         </p>
 
         <div style="width: 100%; height: 1px; background: linear-gradient(to right, transparent, #ccc 20%, #ccc 80%, transparent); margin: 10px 0;"></div>
 
-        <!-- 页内快速跳转 -->
-        <p style="text-align:center; font-size:13px; margin:6px 0;">
-          <a href="#debate" style="color:#ad7020; text-decoration:none;">🗣️ Debate Team</a>
-          <span style="color:#ccc;">&nbsp;|&nbsp;</span>
-          <a href="#sports" style="color:#ad7020; text-decoration:none;">🏃 Sports Team</a>
-          <span style="color:#ccc;">&nbsp;|&nbsp;</span>
-          <a href="#clubs" style="color:#ad7020; text-decoration:none;">🎨 Volunteering</a>
-        </p>
-
-        <!-- ================= 辩论队 ================= -->
+        <!-- ================= Debate Team ================= -->
         <table id="debate" class="page-section" style="width:96%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
             <heading>🗣️ Debate Team</heading>
             <br>
             <td style="padding:0px;width:100%;vertical-align:middle">
-              <li class="news-entry"><span class="news-date-badge">2024.10 - 2025.10</span> 院辩论队 赛事副队
-                <br><span style="padding-left:4px;">· 参加 2025 年"新生杯"辩论赛,获得亚军</span>
-                <br><span style="padding-left:4px;">· 担任一辩,负责立论与总结陈词</span>
-                <br><span style="padding-left:4px; color:#999;">(请替换成你的真实经历)</span>
-              </li>
-              <li class="news-entry"><span class="news-date-badge">2025.03</span> 校际辩论友谊赛
-                <br><span style="padding-left:4px;">· 与 XX 大学交流赛,辩题:《人工智能是否应该被限制发展》</span>
-                <br><span style="padding-left:4px; color:#999;">(请替换成你的真实经历)</span>
-              </li>
+              <div style="background:#fff; border:1px solid rgba(0,0,0,0.08); border-radius:16px; padding:20px 22px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+
+                <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:6px 12px;">
+                  <span style="font-size:17px; font-weight:bold;">Surrey International Institute Debate Team</span>
+                  <span class="news-date-badge">Sept. 2024 – Present</span>
+                </div>
+                <div style="font-size:13px; color:#888; margin:4px 0 12px;">
+                  📍 Dalian, China &nbsp;·&nbsp; 🧑‍💼 Deputy Captain (Competitions)
+                </div>
+
+                <p style="margin:0 0 4px; font-weight:600; color:#ad7020;">🎯 What I Did</p>
+                <ul style="margin:0 0 14px; padding-left:20px; font-size:14px; line-height:1.6;">
+                  <li>Managed the team's daily operations, led the recruitment and selection of new members, and built a systematic training program that strengthened team cohesion and overall performance.</li>
+                </ul>
+
+                <p style="margin:0 0 4px; font-weight:600; color:#ad7020;">🏆 Achievements</p>
+                <ul style="margin:0 0 16px; padding-left:20px; font-size:14px; line-height:1.6;">
+                  <li>Coordinated multiple institute-level debate tournaments and freshman competitions, covering schedule planning, motion design, and judge coordination.</li>
+                </ul>
+
+                <!-- Debate team photos: images/campus/bld1.jpg ~ bld6.jpg
+                     (If your file extension differs, e.g. .png, just update the src below.) -->
+                <div class="campus-scroll">
+                  <div class="campus-track">
+                    <img class="campus-photo debate" src="images/campus/bld1.jpg" alt="Debate team photo 1">
+                    <img class="campus-photo debate" src="images/campus/bld2.jpg" alt="Debate team photo 2">
+                    <img class="campus-photo debate" src="images/campus/bld3.jpg" alt="Debate team photo 3">
+                    <img class="campus-photo debate" src="images/campus/bld4.jpg" alt="Debate team photo 4">
+                    <img class="campus-photo debate" src="images/campus/bld5.jpg" alt="Debate team photo 5">
+                    <img class="campus-photo debate" src="images/campus/bld6.jpg" alt="Debate team photo 6">
+                  </div>
+                </div>
+
+              </div>
             </td>
           </tr>
         </tbody></table>
 
-        <!-- ================= 运动队 ================= -->
-        <table id="sports" class="page-section" style="width:96%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <!-- ================= Running Team ================= -->
+        <table id="running" class="page-section" style="width:96%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
-            <heading>🏃 运动队 Sports Teams</heading>
+            <heading>🏃 Running Team</heading>
             <br>
             <td style="padding:0px;width:100%;vertical-align:middle">
-              <li class="news-entry"><span class="news-date-badge">2023.10 - 至今</span> 校田径队 / 篮球队(选一个你参加的)
-                <br><span style="padding-left:4px;">· 代表学校参加 XX 运动会,获得 XX 名</span>
-                <br><span style="padding-left:4px;">· 每周训练 X 次,和队友们一起为校争光</span>
-                <br><span style="padding-left:4px; color:#999;">(请替换成你的真实经历)</span>
-              </li>
+              <div style="background:#fff; border:1px solid rgba(0,0,0,0.08); border-radius:16px; padding:20px 22px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+
+                <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:6px 12px;">
+                  <span style="font-size:17px; font-weight:bold;">Surrey International Institute Middle &amp; Long-Distance Running Team</span>
+                  <span class="news-date-badge">Aug. 2024 – June 2025</span>
+                </div>
+                <div style="font-size:13px; color:#888; margin:4px 0 12px;">
+                  📍 Dalian, China &nbsp;·&nbsp; 🧑‍💼 Captain
+                </div>
+
+                <p style="margin:0 0 4px; font-weight:600; color:#ad7020;">🎯 What I Did</p>
+                <ul style="margin:0 0 14px; padding-left:20px; font-size:14px; line-height:1.6;">
+                  <li>As captain, led the team through daily management and organized structured training, fostering a positive and mutually supportive team atmosphere.</li>
+                </ul>
+
+                <p style="margin:0 0 4px; font-weight:600; color:#ad7020;">🏆 Achievements</p>
+                <ul style="margin:0 0 16px; padding-left:20px; font-size:14px; line-height:1.6;">
+                  <li>Coordinated the team's participation in the university sports meet and various campus track &amp; field events, handling pre-race mobilization, tactical planning, and on-site coordination.</li>
+                </ul>
+
+                <!-- Scrolling photos: same as above — replace with e.g.
+                     <img class="campus-photo running" src="images/campus/running1.jpg" alt="Running team"> -->
+                <div class="campus-scroll">
+                  <div class="campus-track">
+                    <div class="campus-photo running">📷 Photo 1</div>
+                    <div class="campus-photo running">📷 Photo 2</div>
+                    <div class="campus-photo running">📷 Photo 3</div>
+                    <div class="campus-photo running">📷 Photo 4</div>
+                  </div>
+                </div>
+
+              </div>
             </td>
           </tr>
         </tbody></table>
 
-        <!-- ================= 社团与志愿 ================= -->
-        <table id="clubs" class="page-section" style="width:96%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <heading>🎨 社团与志愿活动 Clubs &amp; Volunteering</heading>
-            <br>
-            <td style="padding:0px;width:100%;vertical-align:middle">
-              <li class="news-entry"><span class="news-date-badge">2024.10</span> XX 志愿者活动
-                <br><span style="padding-left:4px;">· 参加社区支教 / 环保公益等活动</span>
-                <br><span style="padding-left:4px; color:#999;">(请替换成你的真实经历)</span>
-              </li>
-              <li class="news-entry"><span class="news-date-badge">2024.03</span> XX 社团
-                <br><span style="padding-left:4px;">· 加入 XX 社团,参与组织 XX 活动</span>
-                <br><span style="padding-left:4px; color:#999;">(请替换成你的真实经历)</span>
-              </li>
-            </td>
-          </tr>
-        </tbody></table>
-
-        <!-- 页脚 -->
+        <!-- Footer -->
         <p style="text-align:center; font-size:13px; margin:24px 0 6px;">
-          <a href="index.html" style="color:#ad7020; text-decoration:none;">← 返回主页 Back to Home</a>
+          <a href="index.html" style="color:#ad7020; text-decoration:none;">← Back to Home</a>
         </p>
         <p style="text-align:center; font-size:12px; color:#999;">
-          Fang Ruoya | Campus Experiences 校园经历
+          Fang Ruoya | Campus Experiences
         </p>
 
       </td>
     </tr>
   </tbody></table>
-</body>
-</html>
+
+  <script>
+    // Duplicate the photo set so the 
