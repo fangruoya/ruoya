@@ -346,6 +346,7 @@
 			    padding: 2px 9px; border-radius: 12px; white-space: nowrap;
 			  }
 			  .hl-num { color: #ad7020; font-weight: bold; }
+			  .intern-logo { height: 22px; max-width: 110px; object-fit: contain; margin-left: auto; }
 			  .intern-card ul { margin: 8px 0 0; padding-left: 18px; color: #333; }
 			  .intern-card li { margin: 5px 0; }
 			</style>
@@ -357,6 +358,7 @@
 			        <div class="intern-line1">
 			          <span class="news-date-badge">Feb. 2026 – Apr. 2026</span>
 			          <strong>Guangzhou Kaide Yuehao Private Equity Fund Management Co., Ltd.</strong>
+			          <img class="intern-logo" src="images/kdyh.png" alt="Kaide Yuehao">
 			        </div>
 			        <div class="intern-line2">
 			          <span class="intern-role">Investment Department Intern</span>
@@ -374,6 +376,7 @@
 			        <div class="intern-line1">
 			          <span class="news-date-badge">Jul. 2025 – Sept. 2025</span>
 			          <strong>Huanlejia Food Group Co., Ltd. (300997)</strong>
+			          <img class="intern-logo" src="images/hlj.png" alt="Huanlejia">
 			        </div>
 			        <div class="intern-line2">
 			          <span class="intern-role">E-commerce Operations Intern</span>
@@ -473,13 +476,12 @@
 			  .proj-img-slot {
 			    width: 148px; flex-shrink: 0;
 			    aspect-ratio: 1 / 1;
-			    border: 1.5px dashed rgba(173,112,32,0.4);
+			    border: 1px solid rgba(17,17,17,0.08);
 			    border-radius: 12px;
-			    background: #fdf9f1;
-			    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
-			    color: #b99968; font-size: 12px;
+			    overflow: hidden;
+			    box-shadow: 0 2px 10px rgba(173,112,32,0.06);
 			  }
-			  .proj-img-slot .slot-icon { font-size: 30px; opacity: .5; }
+			  .proj-img-slot img { width: 100%; height: 100%; object-fit: cover; }
 			  @media (max-width: 700px) {
 			    .pipe-flow { flex-direction: column; }
 			    .pipe-arrow { transform: rotate(90deg); }
@@ -495,21 +497,17 @@
 			    <div class="proj-card">
 			      <span class="proj-num">01</span>
 			      <div class="proj-line1">
-			        <strong>Guangzhou "Invest First, Equity Later" Technology Commercialization Program</strong>
+			        <strong>AI-Enabled Cys-Based Nanocarrier Platform for Cancer Therapeutics Translation</strong>
 			        <span class="proj-chip">Biomedicine</span>
+			        <span class="proj-chip">Invest First, Equity Later Program</span>
 			      </div>
 			      <div class="proj-overview-row">
 			        <div class="proj-text">
 			          <div class="proj-sub" style="margin-top:0;">Project Overview</div>
 			          <p class="proj-para">This project focuses on the commercialization and translational development of an AI-enabled cysteine (Cys)-based intelligent nanocarrier platform for precision cancer therapy. By integrating AI-assisted material optimization with redox-responsive drug delivery technology, the platform aims to overcome key challenges in conventional nanomedicine, including limited targeting efficiency and insufficient clinical translation. The technology focuses on developing GSH-responsive polymeric nanocarriers for drug delivery, with pancreatic cancer as the initial therapeutic indication.</p>
-			          <div class="proj-sub">Commercial Strategy &amp; Market Analysis</div>
-			          <p class="proj-para">Participated in the Guangzhou "Invest First, Equity Later" Technology Commercialization Program, supporting the evaluation of commercialization feasibility for this early-stage biotechnology venture. Conducted market research on the nanomedicine delivery industry, analyzed unmet needs in high-end drug delivery systems, and contributed to strategic positioning of the platform.</p>
-			          <div class="proj-sub">Business Model Development</div>
-			          <p class="proj-para">Assisted in designing the dual-driven commercialization model combining AI-enabled platform services and proprietary drug development. Evaluated the potential of a CRO/CDMO-oriented technology service model alongside an internal innovative drug pipeline, supporting early-stage financial planning and business framework construction.</p>
 			        </div>
 			        <div class="proj-img-slot">
-			          <span class="slot-icon">💉</span>
-			          <span>Project image</span>
+			          <img src="images/project2.png" alt="AI-Enabled Cys-Based Nanocarrier Platform">
 			        </div>
 			      </div>
 			      <div class="proj-sub">My Contribution</div>
@@ -533,8 +531,7 @@
 			          <p class="proj-para">The project explores a differentiated therapeutic strategy beyond conventional weight-loss approaches, with potential applications in combination therapy and long-term metabolic management. <strong>Velmit</strong> is positioned as a complementary therapeutic option within the GLP-1 ecosystem, aiming to improve metabolic outcomes through synergistic mechanisms.</p>
 			        </div>
 			        <div class="proj-img-slot">
-			          <span class="slot-icon">🧬</span>
-			          <span>Project image</span>
+			          <img src="images/project1.png" alt="AI-Driven Metabolic Remodeling Agent">
 			        </div>
 			      </div>
 			      <div class="proj-sub">My Contribution</div>
@@ -628,8 +625,8 @@
 			      <h3>CGMA Business Elite International Challenge</h3>
 			      <div class="project-tags"><span>🏅 Provincial 2nd Prize</span><span>Oct. 2025 – Nov. 2025</span></div>
 			      <ul class="comp-list">
-			        <li><strong>B2B customer segmentation &amp; value proposition design:</strong> For an IT company's strategic shift from retail to institutional customers, led customer segmentation analysis and redesigned the value proposition from low-price retail to "reliable bulk supply + customized services + contractual delivery guarantees", directly supporting the company's sales team formation proposal.</li>
-			        <li><strong>Financial ratio modeling &amp; forecasting:</strong> Built forecasting models for key indicators such as inventory turnover, ROA, and debt-to-asset ratio based on the company's financial data, quantifying the improvement space in asset efficiency and debt structure after JIT implementation, providing data support for management decisions.</li>
+			        <li><strong>B2B segmentation &amp; value proposition design:</strong> For an IT company's shift from retail to institutional customers, led customer segmentation and redesigned the value proposition around reliable bulk supply, customized services, and contractual delivery guarantees.</li>
+			        <li><strong>Financial ratio modeling &amp; forecasting:</strong> Built forecasting models for inventory turnover, ROA, and debt-to-asset ratio to quantify the improvement in asset efficiency and debt structure after JIT implementation.</li>
 			      </ul>
 			    </div>
 			    <div class="project-card">
@@ -637,8 +634,8 @@
 			      <h3>3rd Liaoning Province University Students Financial Big Data Analysis Competition</h3>
 			      <div class="project-tags"><span>🏅 Provincial 1st Prize</span><span>Sept. 2024 – Nov. 2024</span></div>
 			      <ul class="comp-list">
-			        <li><strong>Consumer &amp; market trend analysis in the health food industry:</strong> Completed PEST, Porter's Five Forces, and industry lifecycle analyses of the health food sector, focusing on consumer behavior changes and market trends, and formulated an investment logic of "policy + consumption upgrade + technology-driven".</li>
-			        <li><strong>Competitive landscape &amp; profitability assessment:</strong> Analyzed Dongpeng Beverage (605499)'s market share, channel layout, and brand loyalty in the energy drink market, and assessed its differentiated competitive advantages. Based on the company's financial data over the past three years, applied ROE decomposition and solvency indicators to evaluate its profitability, growth, and financial risk. Built Power BI visualizations of consumer survey data and market trends, and authored a <span class="hl-num">20+</span>-page investment analysis report.</li>
+			        <li><strong>Consumer &amp; market trend analysis:</strong> Completed PEST, Porter's Five Forces, and industry lifecycle analyses of the health food sector, forming an investment logic of "policy + consumption upgrade + technology-driven".</li>
+			        <li><strong>Competitive landscape &amp; profitability assessment:</strong> Assessed Dongpeng Beverage (605499)'s market share, channel layout, and brand loyalty, and evaluated its profitability, growth, and financial risk via ROE decomposition and solvency indicators; built Power BI visualizations and authored a <span class="hl-num">20+</span>-page investment report.</li>
 			      </ul>
 			    </div>
 			    <div class="project-card">
@@ -646,9 +643,9 @@
 			      <h3>Innovation &amp; Entrepreneurship Competition — "ICH Revitalization" Project</h3>
 			      <div class="project-tags"><span>👑 Project Captain</span><span>🏅 Provincial Award</span><span>Sept. 2024 – Present</span></div>
 			      <ul class="comp-list">
-			        <li>Operated the project's social media accounts, planned and produced promotional videos, with cumulative views exceeding <span class="hl-num">5,000+</span>.</li>
-			        <li>Planned and executed in-depth interviews with intangible cultural heritage inheritors — independently designed the interview outline, coordinated on-site communication, and organized materials into high-quality interview records and promotional content.</li>
-			        <li>Led the planning and implementation of the "Shadow Puppetry on Campus" event in partnership with Dalian Shuxiangyuan Primary School, covering activity design, process arrangement, on-site presentations, and interactive sessions; the event reached over <span class="hl-num">1,200</span> primary school students.</li>
+			        <li>Operated project social media accounts and produced promotional videos, with cumulative views exceeding <span class="hl-num">5,000+</span>.</li>
+			        <li>Planned and executed in-depth interviews with intangible cultural heritage inheritors, producing high-quality interview records and promotional content.</li>
+			        <li>Led the "Shadow Puppetry on Campus" event with Dalian Shuxiangyuan Primary School, covering planning, presentations, and interactive sessions for over <span class="hl-num">1,200</span> students.</li>
 			      </ul>
 			    </div>
 			    <div class="project-card">
