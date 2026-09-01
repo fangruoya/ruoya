@@ -449,27 +449,43 @@
 			  .proj-para { margin: 5px 0 0; color: #444; font-size: 13.5px; line-height: 1.7; }
 			  /* ---- AI 药物发现流程图 ---- */
 			  .pipe-box {
-			    border: 1px solid rgba(17,17,17,0.08);
-			    border-radius: 14px;
-			    background: #fff;
-			    padding: 16px 20px;
-			    box-shadow: 0 3px 14px rgba(173,112,32,0.06);
+			    margin-top: 4px;
+			    border: 1px solid rgba(173,112,32,0.18);
+			    border-radius: 12px;
+			    background: #fdfaf3;
+			    padding: 14px 16px;
 			  }
 			  .pipe-flow { display: flex; align-items: stretch; gap: 8px; margin-top: 12px; }
 			  .pipe-step {
-			    flex: 1 1 0; min-width: 118px;
-			    background: #faf5ec;
+			    flex: 1 1 0; min-width: 100px;
+			    background: #fff;
 			    border: 1px solid rgba(173,112,32,0.22);
 			    border-radius: 10px;
-			    padding: 10px 12px;
+			    padding: 10px 10px;
+			    text-align: center;
 			  }
-			  .pipe-step-title { font-size: 11px; font-weight: bold; color: #ad7020; letter-spacing: .6px; }
-			  .pipe-step p { margin: 5px 0 0; font-size: 11.5px; color: #555; line-height: 1.5; }
+			  .pipe-icon { font-size: 20px; line-height: 1; margin-bottom: 7px; }
+			  .pipe-step-title { font-size: 10.5px; font-weight: bold; color: #ad7020; letter-spacing: .5px; }
+			  .pipe-step p { margin: 5px 0 0; font-size: 11px; color: #555; line-height: 1.5; }
 			  .pipe-arrow { align-self: center; color: #ad7020; font-size: 17px; font-weight: bold; flex-shrink: 0; }
+			  .proj-overview-row { display: flex; align-items: flex-start; gap: 18px; margin-top: 4px; }
+			  .proj-overview-row .proj-text { flex: 1; min-width: 0; }
+			  .proj-img-slot {
+			    width: 148px; flex-shrink: 0;
+			    aspect-ratio: 1 / 1;
+			    border: 1.5px dashed rgba(173,112,32,0.4);
+			    border-radius: 12px;
+			    background: #fdf9f1;
+			    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+			    color: #b99968; font-size: 12px;
+			  }
+			  .proj-img-slot .slot-icon { font-size: 30px; opacity: .5; }
 			  @media (max-width: 700px) {
 			    .pipe-flow { flex-direction: column; }
 			    .pipe-arrow { transform: rotate(90deg); }
 			    .pipe-step { min-width: 0; }
+			    .proj-overview-row { flex-direction: column; }
+			    .proj-img-slot { width: 100%; aspect-ratio: 16 / 6; }
 			  }
 			  .proj-card ul { margin: 8px 0 0; padding-left: 18px; color: #333; }
 			  .proj-card li { margin: 5px 0; }
@@ -493,44 +509,56 @@
 			        <strong>AI-Driven Metabolic Remodeling Agent Development</strong>
 			        <span class="proj-chip">AI + Pharma</span>
 			      </div>
-			      <div class="proj-sub">Project Overview</div>
-			      <p class="proj-para">This project focuses on developing a novel metabolic remodeling agent through an AI-enabled drug discovery platform, targeting obesity and metabolic disorders. Unlike traditional GLP-1-based therapies that primarily regulate appetite, the candidate molecule <strong>Velmit</strong> aims to reshape metabolic homeostasis by regulating lipid metabolism, mitochondrial function, and energy utilization pathways.</p>
-			      <div class="proj-sub">Innovation &amp; Potential</div>
-			      <p class="proj-para">The project explores a differentiated therapeutic strategy beyond conventional weight-loss approaches, with potential applications in combination therapy and long-term metabolic management. <strong>Velmit</strong> is positioned as a complementary therapeutic option within the GLP-1 ecosystem, aiming to improve metabolic outcomes through synergistic mechanisms.</p>
+			      <div class="proj-overview-row">
+			        <div class="proj-text">
+			          <div class="proj-sub" style="margin-top:0;">Project Overview</div>
+			          <p class="proj-para">This project focuses on developing a novel metabolic remodeling agent through an AI-enabled drug discovery platform, targeting obesity and metabolic disorders. Unlike traditional GLP-1-based therapies that primarily regulate appetite, the candidate molecule <strong>Velmit</strong> aims to reshape metabolic homeostasis by regulating lipid metabolism, mitochondrial function, and energy utilization pathways.</p>
+			          <div class="proj-sub">Innovation &amp; Potential</div>
+			          <p class="proj-para">The project explores a differentiated therapeutic strategy beyond conventional weight-loss approaches, with potential applications in combination therapy and long-term metabolic management. <strong>Velmit</strong> is positioned as a complementary therapeutic option within the GLP-1 ecosystem, aiming to improve metabolic outcomes through synergistic mechanisms.</p>
+			        </div>
+			        <div class="proj-img-slot">
+			          <span class="slot-icon">🧬</span>
+			          <span>Project image</span>
+			        </div>
+			      </div>
 			      <div class="proj-sub">My Contribution</div>
 			      <ul>
 			        <li>Supported commercialization strategy development by analyzing clinical needs, market opportunities, and translational potential.</li>
 			        <li>Participated in business planning and investor communications, helping translate complex biomedical concepts into clear commercial narratives.</li>
 			        <li>Assisted in evaluating potential application scenarios and strategic positioning for future drug development.</li>
 			      </ul>
-			    </div>
-
-			    <div class="pipe-box">
-			      <div class="proj-sub" style="margin-top:0;">AI Drug Discovery Pipeline</div>
-			      <div class="pipe-flow">
-			        <div class="pipe-step">
-			          <div class="pipe-step-title">MOLECULAR DATA</div>
-			          <p>Large-scale chemical libraries &amp; biological data</p>
-			        </div>
-			        <span class="pipe-arrow">→</span>
-			        <div class="pipe-step">
-			          <div class="pipe-step-title">AI-BASED SCREENING</div>
-			          <p>Graph neural network model for property prediction</p>
-			        </div>
-			        <span class="pipe-arrow">→</span>
-			        <div class="pipe-step">
-			          <div class="pipe-step-title">CANDIDATE PREDICTION</div>
-			          <p>Identify potential active compounds</p>
-			        </div>
-			        <span class="pipe-arrow">→</span>
-			        <div class="pipe-step">
-			          <div class="pipe-step-title">EXPERIMENTAL VALIDATION</div>
-			          <p>In vitro / cell-based assays to confirm activity</p>
-			        </div>
-			        <span class="pipe-arrow">→</span>
-			        <div class="pipe-step">
-			          <div class="pipe-step-title">LEAD OPTIMIZATION</div>
-			          <p>Optimize efficacy, safety, and drug-like properties</p>
+			      <div class="pipe-box">
+			        <div class="proj-sub" style="margin-top:0;">AI Drug Discovery Pipeline</div>
+			        <div class="pipe-flow">
+			          <div class="pipe-step">
+			            <div class="pipe-icon">🧬</div>
+			            <div class="pipe-step-title">MOLECULAR DATA</div>
+			            <p>Large-scale chemical libraries &amp; biological data</p>
+			          </div>
+			          <span class="pipe-arrow">→</span>
+			          <div class="pipe-step">
+			            <div class="pipe-icon">🤖</div>
+			            <div class="pipe-step-title">AI-BASED SCREENING</div>
+			            <p>Graph neural network model for property prediction</p>
+			          </div>
+			          <span class="pipe-arrow">→</span>
+			          <div class="pipe-step">
+			            <div class="pipe-icon">🎯</div>
+			            <div class="pipe-step-title">CANDIDATE PREDICTION</div>
+			            <p>Identify potential active compounds</p>
+			          </div>
+			          <span class="pipe-arrow">→</span>
+			          <div class="pipe-step">
+			            <div class="pipe-icon">🔬</div>
+			            <div class="pipe-step-title">EXPERIMENTAL VALIDATION</div>
+			            <p>In vitro / cell-based assays to confirm activity</p>
+			          </div>
+			          <span class="pipe-arrow">→</span>
+			          <div class="pipe-step">
+			            <div class="pipe-icon">💊</div>
+			            <div class="pipe-step-title">LEAD OPTIMIZATION</div>
+			            <p>Optimize efficacy, safety, and drug-like properties</p>
+			          </div>
 			        </div>
 			      </div>
 			    </div>
