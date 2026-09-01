@@ -334,7 +334,9 @@
 			    background: #fff; border: 3px solid #ad7020;
 			    box-shadow: 0 0 0 3px rgba(173,112,32,0.12);
 			  }
-			  .intern-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+			  .intern-head { display: block; }
+			  .intern-line1 { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+			  .intern-line2 { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
 			  .intern-head strong { font-size: 15.5px; }
 			  .intern-role { color: #ad7020; font-size: 13.5px; font-style: italic; }
 			  .intern-loc {
@@ -343,6 +345,7 @@
 			    border: 1px solid rgba(251,165,36,0.35);
 			    padding: 2px 9px; border-radius: 12px; white-space: nowrap;
 			  }
+			  .hl-num { color: #ad7020; font-weight: bold; }
 			  .intern-card ul { margin: 8px 0 0; padding-left: 18px; color: #333; }
 			  .intern-card li { margin: 5px 0; }
 			</style>
@@ -351,27 +354,35 @@
 			    <div class="intern-card">
 			      <span class="intern-dot"></span>
 			      <div class="intern-head">
-			        <span class="news-date-badge">Feb. 2026 – Apr. 2026</span>
-			        <strong>Guangzhou Kaide Yuehao Private Equity Fund Management Co., Ltd.</strong>
-			        <span class="intern-role">Investment Department Intern</span>
-			        <span class="intern-loc">📍 Shenzhen, China</span>
+			        <div class="intern-line1">
+			          <span class="news-date-badge">Feb. 2026 – Apr. 2026</span>
+			          <strong>Guangzhou Kaide Yuehao Private Equity Fund Management Co., Ltd.</strong>
+			        </div>
+			        <div class="intern-line2">
+			          <span class="intern-role">Investment Department Intern</span>
+			          <span class="intern-loc">📍 Shenzhen, China</span>
+			        </div>
 			      </div>
 			      <ul>
-			        <li><strong>Market scanning &amp; competitive analysis:</strong> Focused on the industrial lens and machine vision track, conducting an in-depth market landscape analysis. Independently researched a target company — mapping its market size, downstream applications, core technology advantages, and domestic-substitution potential — and delivered a 25-page structured industry report.</li>
+			        <li><strong>Market scanning &amp; competitive analysis:</strong> Focused on the industrial lens and machine vision track, conducting an in-depth market landscape analysis. Independently researched a target company — mapping its market size, downstream applications, core technology advantages, and domestic-substitution potential — and delivered a <span class="hl-num">25-page</span> structured industry report.</li>
 			        <li><strong>On-site due diligence:</strong> Conducted field due diligence at the target company, collecting first-hand information on production processes, customer structure, and orders, and summarized its core competitiveness and risks to support investment decisions.</li>
 			      </ul>
 			    </div>
 			    <div class="intern-card">
 			      <span class="intern-dot"></span>
 			      <div class="intern-head">
-			        <span class="news-date-badge">Jul. 2025 – Sept. 2025</span>
-			        <strong>Huanlejia Food Group Co., Ltd. (300997)</strong>
-			        <span class="intern-role">E-commerce Operations Intern</span>
-			        <span class="intern-loc">📍 Shenzhen, China</span>
+			        <div class="intern-line1">
+			          <span class="news-date-badge">Jul. 2025 – Sept. 2025</span>
+			          <strong>Huanlejia Food Group Co., Ltd. (300997)</strong>
+			        </div>
+			        <div class="intern-line2">
+			          <span class="intern-role">E-commerce Operations Intern</span>
+			          <span class="intern-loc">📍 Shenzhen, China</span>
+			        </div>
 			      </div>
 			      <ul>
-			        <li><strong>User profiling &amp; targeted marketing:</strong> Used Python to analyze core user profiles and screened county-level KOCs (Key Opinion Consumers) in lower-tier markets, securing nearly 20 partnerships. Combined with inventory data to refine product selection and improve capital efficiency, driving ~5% month-over-month growth in Douyin channel sales.</li>
-			        <li><strong>Data-driven product optimization:</strong> Built inventory-turnover and stock-aging analysis models with Python (pandas), automatically flagging slow-moving and at-risk products and reducing the analysis cycle from 3 hours to 20 minutes per run. Insights were fed back into front-end product selection and marketing resource allocation.</li>
+			        <li><strong>User profiling &amp; targeted marketing:</strong> Used Python to analyze core user profiles and screened county-level KOCs (Key Opinion Consumers) in lower-tier markets, bringing <span class="hl-num">nearly 20</span> partnerships to fruition. Combined with inventory data to refine product selection and improve capital utilization efficiency, driving <span class="hl-num">~5%</span> month-over-month growth in Douyin channel sales.</li>
+			        <li><strong>E-commerce supply chain data processing:</strong> Built inventory-turnover and stock-aging analysis models with Python (pandas), automatically flagging slow-moving and at-risk products and reducing the analysis cycle from <span class="hl-num">3 hours</span> to <span class="hl-num">20 minutes</span> per run. Insights were fed back into front-end product selection and marketing resource allocation.</li>
 			      </ul>
 			    </div>
 			  </div>
@@ -387,7 +398,70 @@
 	            <td style="padding:0px;width:100%;vertical-align:middle">
 
 			<style>
-			  /* ---- 项目卡片网格 ---- */
+			  /* ---- 项目卡片 ---- */
+			  .proj-wrap { padding: 12px 2px 4px; position: relative; }
+			  .proj-wrap::before {
+			    content: ""; position: absolute; left: 15px; top: 10px; bottom: 14px; width: 2px;
+			    background: linear-gradient(180deg, rgba(173,112,32,0.55), rgba(173,112,32,0.12));
+			  }
+			  .proj-card { position: relative; padding: 8px 0 26px 56px; }
+			  .proj-num {
+			    position: absolute; left: 0; top: 8px;
+			    width: 32px; height: 32px; border-radius: 50%;
+			    background: linear-gradient(135deg, #ad7020, #e8b46a);
+			    color: #fff; font-size: 13px; font-weight: bold;
+			    display: flex; align-items: center; justify-content: center;
+			    box-shadow: 0 2px 8px rgba(173,112,32,0.3);
+			  }
+			  .proj-line1 { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+			  .proj-line1 strong { font-size: 15.5px; }
+			  .proj-chip {
+			    display: inline-block; font-size: 11px; font-weight: bold;
+			    color: #6e3519; background: rgba(251,165,36,0.12);
+			    border: 1px solid rgba(251,165,36,0.35);
+			    padding: 2px 9px; border-radius: 12px; white-space: nowrap;
+			  }
+			  .proj-card ul { margin: 8px 0 0; padding-left: 18px; color: #333; }
+			  .proj-card li { margin: 5px 0; }
+			</style>
+
+			  <div class="proj-wrap">
+			    <div class="proj-card">
+			      <span class="proj-num">01</span>
+			      <div class="proj-line1">
+			        <strong>Guangzhou "Invest-then-Equity" Science &amp; Technology Commercialization Program</strong>
+			        <span class="proj-chip">Biomedicine</span>
+			      </div>
+			      <ul>
+			        <li><strong>Commercialization &amp; financial feasibility analysis:</strong> Participated in the "invest-then-equity" special program for a cysteine (Cys)-based redox-responsive nano drug-delivery platform targeting pancreatic cancer treatment. Conducted commercial scenario analysis for this biomedical startup conversion project, built an early-stage financial framework, and analyzed the dual-engine business model of CRO/CDMO technical services plus self-developed drug pipelines.</li>
+			        <li><strong>Industry &amp; market research:</strong> Surveyed the current state of the nanomedicine delivery industry at home and abroad, identified the industry pain point of China's dependence on imported high-end delivery carriers, and compiled market analysis reference materials to support the project's business case.</li>
+			      </ul>
+			    </div>
+			    <div class="proj-card">
+			      <span class="proj-num">02</span>
+			      <div class="proj-line1">
+			        <strong>Metabolic Reprogramming Agent via an AI Drug Platform</strong>
+			        <span class="proj-chip">AI + Pharma</span>
+			      </div>
+			      <ul>
+			        <li><strong>Value analysis &amp; business planning:</strong> Participated in organizing the project's technical route and commercialization logic. Based on therapeutic needs and potential market space, assisted in analyzing the candidate drug's innovative advantages, clinical application scenarios, and industrial transformation potential — pushing the project from a technical concept toward an innovative drug with market value.</li>
+			        <li><strong>Capital communication &amp; resource matchmaking:</strong> Participated in investor interviews, project exchanges, and commercial presentations, helping communicate the project's innovative value, technical advantages, and future development potential to external partners.</li>
+			      </ul>
+			    </div>
+			  </div>
+
+            </td>
+          </tr>
+        </tbody></table>
+
+			<table id="competition" class="page-section" style="width:96%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+	          <tr>
+	              <heading>My Competition</heading>
+	            <br>
+	            <td style="padding:0px;width:100%;vertical-align:middle">
+
+			<style>
+			  /* ---- 竞赛四宫格 ---- */
 			  .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; padding: 8px 2px 8px; }
 			  @media (max-width: 640px) { .project-grid { grid-template-columns: 1fr; } }
 			  .project-card {
@@ -417,28 +491,28 @@
 
 			  <div class="project-grid">
 			    <div class="project-card">
-			      <div class="project-icon">📊</div>
-			      <h3>【项目名称一】</h3>
-			      <p>【一句话项目简介，例：基于 XXX 数据的 XX 分析 / 模型】</p>
-			      <div class="project-tags"><span>【工具/技术】</span><span>【工具/技术】</span></div>
+			      <div class="project-icon">🏆</div>
+			      <h3>【竞赛名称一】</h3>
+			      <p>【一句话描述，例：参加 XX 大赛并获 XX 奖项】</p>
+			      <div class="project-tags"><span>【奖项】</span><span>【年份】</span></div>
 			    </div>
 			    <div class="project-card">
-			      <div class="project-icon">🤖</div>
-			      <h3>【项目名称二】</h3>
-			      <p>【一句话项目简介】</p>
-			      <div class="project-tags"><span>【工具/技术】</span></div>
+			      <div class="project-icon">🥇</div>
+			      <h3>【竞赛名称二】</h3>
+			      <p>【一句话描述】</p>
+			      <div class="project-tags"><span>【奖项】</span><span>【年份】</span></div>
 			    </div>
 			    <div class="project-card">
-			      <div class="project-icon">📈</div>
-			      <h3>【项目名称三】</h3>
-			      <p>【一句话项目简介】</p>
-			      <div class="project-tags"><span>【工具/技术】</span></div>
+			      <div class="project-icon">🥈</div>
+			      <h3>【竞赛名称三】</h3>
+			      <p>【一句话描述】</p>
+			      <div class="project-tags"><span>【奖项】</span><span>【年份】</span></div>
 			    </div>
 			    <div class="project-card">
-			      <div class="project-icon">💡</div>
-			      <h3>【项目名称四】</h3>
-			      <p>【一句话项目简介】</p>
-			      <div class="project-tags"><span>【工具/技术】</span></div>
+			      <div class="project-icon">🥉</div>
+			      <h3>【竞赛名称四】</h3>
+			      <p>【一句话描述】</p>
+			      <div class="project-tags"><span>【奖项】</span><span>【年份】</span></div>
 			    </div>
 			  </div>
 
