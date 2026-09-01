@@ -58,7 +58,7 @@
 
               <p class="contact-links">
                 <span class="contact-line">
-                <a href="mailto:ruoya_fang@outlook.com" id="email-copy" class="email-link" title="Click to copy email" style="color:#ad7020;">
+                <a href="mailto:ruoya_fang@outlook.com" id="email-copy" class="email-link" title="Click to copy email" style="color:#ad7020;" onclick="copyText('ruoya_fang@outlook.com', event); return false;">
                   <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="3" y="5" width="18" height="14" rx="2"></rect>
                     <path d="m3 7 9 6 9-6"></path>
@@ -84,7 +84,7 @@
 
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <img style="width:68%;max-width:62%;border-radius:8px;" alt="Fang Ruoya" src="images/template/fangruoya.jpg">
+              <img style="width:68%;max-width:62%;border-radius:8px;margin-left:7%;" alt="Fang Ruoya" src="images/template/fangruoya.jpg">
             </td>
           </tr>
         </tbody></table>
@@ -94,28 +94,91 @@
 	              <heading>Education</heading>
 	            <br>
 	            <td style="padding:0px;width:100%;vertical-align:middle">
-			  <P class="news-first-entry">
-				<li class="news-entry" style="display:flex; align-items:center; justify-content:space-between; gap:16px; list-style:none;">
-					<div style="flex:1; min-width:0;">
-	            	<span class="news-date-badge">Sept. 2023-June. 2027</span> Dongbei University of Finance and Economics
-	            	<br><span style="padding-left:4px;"><strong>Major:</strong>&nbsp;&nbsp; Finance &amp; Accounting</span>
-					<br><span style="padding-left:4px;"><strong>GPA:</strong>&nbsp;&nbsp; 4.06/5.0 </span>
-					<br><span style="padding-left:4px;"><strong>Main Course:</strong> Management Accounting (95), Financial Planning and Modelling(93), Statistics(90) </span>
-					</div>
-					<img src="images/template/dbcj.jpg" alt="Dongbei University of Finance and Economics" style="height:160px; width:160px; object-fit:contain; flex-shrink:0;">
-				</li>
-	          </P>
-			  <P>
-	            <li class="news-entry" style="display:flex; align-items:center; justify-content:space-between; gap:16px; list-style:none;">
-					<div style="flex:1; min-width:0;">
-	            	<span class="news-date-badge">Sept. 2023-June. 2027</span> University of Surrey
-					<br><span style="padding-left:4px;"><strong>Major:</strong>&nbsp;&nbsp; Finance &amp; Accounting</span>
-					<br><span style="padding-left:4px;"><strong>GPA:</strong>&nbsp;&nbsp; 73.38/100 </span>
-					<br><span style="padding-left:4px;"><strong>Main Course:</strong>&nbsp;&nbsp; Introduction to Taxation (97), Digital Coding(95),Global Corporate Finance and Markets(95), </span>
-					</div>
-					<img src="images/template/sl.png" alt="University of Surrey" style="height:160px; width:160px; object-fit:contain; flex-shrink:0;">
-	            </li>
-	          </P>
+			<style>
+			  /* ---- 教育经历卡片 ---- */
+			  .edu-wrap { padding: 8px 2px 4px; }
+			  .edu-card {
+			    position: relative;
+			    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+			    border: 1px solid rgba(17,17,17,0.08);
+			    border-radius: 12px;
+			    background: #fff;
+			    padding: 16px 20px 16px 24px;
+			    margin-bottom: 14px;
+			    overflow: hidden;
+			    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+			    transition: transform .18s ease, box-shadow .18s ease;
+			  }
+			  .edu-card::before {
+			    content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+			    background: linear-gradient(180deg, #ad7020, #e8b46a);
+			  }
+			  .edu-card:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(173,112,32,0.12); }
+			  .edu-logo { width: 88px; height: 88px; object-fit: contain; flex-shrink: 0; }
+			  @media (max-width: 600px) { .edu-logo { width: 64px; height: 64px; } }
+			  .edu-main { flex: 1; min-width: 0; }
+			  .edu-line { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+			  .edu-name { font-size: 15.5px; }
+			  .edu-chip {
+			    display: inline-block; font-size: 11px; font-weight: bold;
+			    color: #6e3519; background: rgba(251,165,36,0.12);
+			    border: 1px solid rgba(251,165,36,0.35);
+			    padding: 2px 9px; border-radius: 12px; white-space: nowrap;
+			  }
+			  .edu-meta { color: #555; font-size: 13px; margin-top: 7px; }
+			  .gpa-chip {
+			    display: inline-block; font-size: 12px; font-weight: bold;
+			    color: #fff; background: #ad7020;
+			    padding: 2px 10px; border-radius: 12px;
+			  }
+			  .course-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+			  .course-tags span {
+			    font-size: 11.5px; color: #444;
+			    background: #faf5ec; border: 1px solid rgba(173,112,32,0.25);
+			    padding: 2px 9px; border-radius: 12px;
+			  }
+			  .edu-connector { height: 14px; border-left: 2px dashed rgba(173,112,32,0.4); margin-left: 13px; }
+			</style>
+
+			  <div class="edu-wrap">
+			    <div class="edu-card">
+			      <div class="edu-main">
+			        <div class="edu-line">
+			          <span class="news-date-badge">Sept. 2023-June. 2027</span>
+			          <strong class="edu-name">Dongbei University of Finance and Economics</strong>
+			          <span class="edu-chip">📍 Dalian, China</span>
+			        </div>
+			        <div class="edu-meta">
+			          <strong>Major:</strong>&nbsp;&nbsp; Finance &amp; Accounting &nbsp;|&nbsp; <span class="gpa-chip">GPA 4.06 / 5.0</span>
+			        </div>
+			        <div class="course-tags">
+			          <span>📚 Management Accounting (95)</span>
+			          <span>📚 Financial Planning and Modelling (93)</span>
+			          <span>📚 Statistics (90)</span>
+			        </div>
+			      </div>
+			      <img class="edu-logo" src="images/template/dbcj.jpg" alt="Dongbei University of Finance and Economics">
+			    </div>
+			    <div class="edu-connector"></div>
+			    <div class="edu-card">
+			      <div class="edu-main">
+			        <div class="edu-line">
+			          <span class="news-date-badge">Sept. 2023-June. 2027</span>
+			          <strong class="edu-name">University of Surrey</strong>
+			          <span class="edu-chip">📍 Guildford, UK</span>
+			        </div>
+			        <div class="edu-meta">
+			          <strong>Major:</strong>&nbsp;&nbsp; Finance &amp; Accounting &nbsp;|&nbsp; <span class="gpa-chip">GPA 73.38 / 100</span>
+			        </div>
+			        <div class="course-tags">
+			          <span>📚 Introduction to Taxation (97)</span>
+			          <span>📚 Digital Coding (95)</span>
+			          <span>📚 Global Corporate Finance and Markets (95)</span>
+			        </div>
+			      </div>
+			      <img class="edu-logo" src="images/template/sl.png" alt="University of Surrey">
+			    </div>
+			  </div>
 
             </td>
           </tr>
@@ -219,33 +282,33 @@
 			</style>
 
 			  <div class="res-card">
-			    <span class="res-badge">👩‍🔬 Visiting Research Student</span>
+			    <span class="res-badge">👩‍🔬 Visiting Research Student (VRS)</span>
 			    <div class="res-head">
 			      <img src="images/template/810-2206151645510-L-lp.png" alt="HKUST-GZ">
 			      <div class="res-title">
 			        <strong>The Hong Kong University of Science and Technology (Guangzhou)</strong>
-			        <span class="res-period">【2026.0X – 2026.0X】 · 【课题组 / 实验室名称】 · Advisor: Prof. 【导师姓名】</span>
+			        <span class="res-period">Bioscience &amp; Biomedical Engineering · Aug. 14, 2026 – Present · Advisor: Prof. Jun Wu · Guangzhou, China</span>
 			      </div>
 			    </div>
-			    <p class="res-desc">【一句话概括这段研究经历，例：围绕 XXX 问题，参与 XX 方向的课题研究。】</p>
+			    <p class="res-desc">Research focus: nanoparticle-based drug delivery systems and critical analysis of AI-driven drug discovery.</p>
 			    <ul>
-			      <li>【做了什么事，例：参与 XX 课题，负责数据收集与清洗……】</li>
-			      <li>【做了什么事，例：复现 / 搭建 XX 模型并完成对比实验……】</li>
-			      <li>【做了什么事，例：撰写分析报告，并在组会上做汇报……】</li>
+			      <li><strong>Self-assembled nanoparticle project:</strong> Participated in constructing GA/MAP-based self-assembled nanoparticle systems within nanomedicine delivery research aimed at alleviating liver–kidney inflammation. Designed concentration gradients and component ratios, completed a series of formulation preparations and condition screenings, and obtained a stable particle-forming parameter window together with a preliminary formulation optimization pathway — providing a feasible basis for subsequent biological evaluation and functional validation.</li>
+			      <li><strong>Academic commentary manuscript:</strong> Writing a critical commentary on the representative paper "DeepDrugDiscovery identifies blood–brain barrier permeable autophagy enhancers for Alzheimer's disease" in the context of rapidly developing AI-driven drug discovery. The commentary reflects on the current acceleration-oriented research paradigm from epistemological, systems-science, and socio-economic perspectives, and an initial draft with original academic viewpoints has been produced.</li>
 			    </ul>
 			    <div class="res-tags">
-			      <span>【研究关键词1】</span><span>【研究关键词2】</span><span>【研究关键词3】</span>
+			      <span>Nanomedicine</span><span>Self-Assembly</span><span>Drug Delivery</span><span>AI for Drug Discovery</span>
 			    </div>
 			  </div>
 
 			  <div class="manu-card">
 			    <span class="status-pill"><span class="pulse-dot"></span>📮 Under Review</span>
-			    <papertitle>【论文标题，英文】</papertitle>
+			    <papertitle>【评论文章标题，英文】</papertitle>
 			    <div class="manu-meta">
-			      <strong>Fang Ruoya</strong>【，第二作者……】,【导师 / 通讯作者】
-			      <br>Submitted to: 【拟投稿期刊 / 会议名称】
+			      <strong>Fang Ruoya</strong>【，合作者姓名】,【导师 / 通讯作者】
+			      <br>Commentary on: "DeepDrugDiscovery identifies blood–brain barrier permeable autophagy enhancers for Alzheimer's disease"
+			      <br>Submitted to: 【期刊名称】
 			    </div>
-			    <p class="manu-note">This manuscript has been submitted for publication and is currently under peer review. Details available upon request.</p>
+			    <p class="manu-note">This commentary manuscript has been submitted for publication and is currently under peer review. Details available upon request.</p>
 			  </div>
 
             </td>
@@ -414,11 +477,7 @@
 			    copyText(text, e);
 			  });
 
-			  // 复制邮箱
-			  document.getElementById('email-copy').addEventListener('click', function(e) {
-			    e.preventDefault();
-			    copyText('ruoya_fang@outlook.com', e);
-			  });
+			  // 复制邮箱：已改为 email 链接上的内联 onclick，无需在此绑定
 			</script>
 
       </td>
