@@ -447,6 +447,30 @@
 			  }
 			  .proj-sub::before { content: "◆ "; font-size: 9px; vertical-align: 1px; }
 			  .proj-para { margin: 5px 0 0; color: #444; font-size: 13.5px; line-height: 1.7; }
+			  /* ---- AI 药物发现流程图 ---- */
+			  .pipe-box {
+			    border: 1px solid rgba(17,17,17,0.08);
+			    border-radius: 14px;
+			    background: #fff;
+			    padding: 16px 20px;
+			    box-shadow: 0 3px 14px rgba(173,112,32,0.06);
+			  }
+			  .pipe-flow { display: flex; align-items: stretch; gap: 8px; margin-top: 12px; }
+			  .pipe-step {
+			    flex: 1 1 0; min-width: 118px;
+			    background: #faf5ec;
+			    border: 1px solid rgba(173,112,32,0.22);
+			    border-radius: 10px;
+			    padding: 10px 12px;
+			  }
+			  .pipe-step-title { font-size: 11px; font-weight: bold; color: #ad7020; letter-spacing: .6px; }
+			  .pipe-step p { margin: 5px 0 0; font-size: 11.5px; color: #555; line-height: 1.5; }
+			  .pipe-arrow { align-self: center; color: #ad7020; font-size: 17px; font-weight: bold; flex-shrink: 0; }
+			  @media (max-width: 700px) {
+			    .pipe-flow { flex-direction: column; }
+			    .pipe-arrow { transform: rotate(90deg); }
+			    .pipe-step { min-width: 0; }
+			  }
 			  .proj-card ul { margin: 8px 0 0; padding-left: 18px; color: #333; }
 			  .proj-card li { margin: 5px 0; }
 			</style>
@@ -479,6 +503,36 @@
 			        <li>Participated in business planning and investor communications, helping translate complex biomedical concepts into clear commercial narratives.</li>
 			        <li>Assisted in evaluating potential application scenarios and strategic positioning for future drug development.</li>
 			      </ul>
+			    </div>
+
+			    <div class="pipe-box">
+			      <div class="proj-sub" style="margin-top:0;">AI Drug Discovery Pipeline</div>
+			      <div class="pipe-flow">
+			        <div class="pipe-step">
+			          <div class="pipe-step-title">MOLECULAR DATA</div>
+			          <p>Large-scale chemical libraries &amp; biological data</p>
+			        </div>
+			        <span class="pipe-arrow">→</span>
+			        <div class="pipe-step">
+			          <div class="pipe-step-title">AI-BASED SCREENING</div>
+			          <p>Graph neural network model for property prediction</p>
+			        </div>
+			        <span class="pipe-arrow">→</span>
+			        <div class="pipe-step">
+			          <div class="pipe-step-title">CANDIDATE PREDICTION</div>
+			          <p>Identify potential active compounds</p>
+			        </div>
+			        <span class="pipe-arrow">→</span>
+			        <div class="pipe-step">
+			          <div class="pipe-step-title">EXPERIMENTAL VALIDATION</div>
+			          <p>In vitro / cell-based assays to confirm activity</p>
+			        </div>
+			        <span class="pipe-arrow">→</span>
+			        <div class="pipe-step">
+			          <div class="pipe-step-title">LEAD OPTIMIZATION</div>
+			          <p>Optimize efficacy, safety, and drug-like properties</p>
+			        </div>
+			      </div>
 			    </div>
 			  </div>
 
