@@ -5,7 +5,7 @@
   <meta name="author" content="Fang Ruoya">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="icon" type="image/svg+xml" href="images/template/avatar.svg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%91%A9%E2%80%8D%F0%9F%8E%93%3C/text%3E%3C/svg%3E">
   <style>
     body, * {
       cursor: url('images/icon/cursor.png'), auto;
@@ -832,7 +832,11 @@
     html, body { overflow-x: hidden; }
 
     @media (max-width: 700px) {
-      /* 1. 所有表格区块改为纵向堆叠 */
+      /* 1. 统一盒模型 + 限制图片宽度（防止右侧内容被裁切） */
+      *, *::before, *::after { box-sizing: border-box; }
+      img, svg { max-width: 100%; }
+
+      /* 2. 所有表格区块改为纵向堆叠 */
       table.page-section, table.page-section tbody,
       table.page-section tr, table.page-section td {
         display: block;
@@ -870,13 +874,24 @@
       .intern-card { padding-left: 36px; }
       .intern-wrap::before { left: 11px; }
       .intern-dot { left: 5px; }
-      .intern-line1 { flex-wrap: nowrap; align-items: flex-start; }
-      .intern-line1 strong { flex: 1 1 auto; min-width: 0; }
-      .intern-logo { height: 44px !important; max-width: 160px !important; flex-shrink: 0; margin-top: 3px; }
+      .intern-line1 { flex-wrap: wrap; align-items: center; }
+      .intern-line1 strong { flex: 1 1 100%; min-width: 0; order: 2; }
+      .intern-logo { height: 44px !important; max-width: 160px !important; flex-shrink: 0; margin-left: auto; }
 
-      /* 8. 漂浮动画区高度略降 */
+      /* 8. VRS 卡片：图标移到标题右侧 */
+      .res-head { flex-wrap: nowrap; flex-direction: row-reverse; }
+      .res-head img { flex-shrink: 0; }
+      .res-title { min-width: 0; }
+
+      /* 9. 漂浮动画区：高度略降、手机端少显示两个胶囊并重排，避免右侧被裁切 */
       .awards-float { height: 80px; }
       .awards-float span { top: 30px; }
+      .awards-float span:nth-child(n+6) { display: none; }
+      .awards-float span:nth-child(1) { left: 2% !important; }
+      .awards-float span:nth-child(2) { left: 12% !important; }
+      .awards-float span:nth-child(3) { left: 24% !important; }
+      .awards-float span:nth-child(4) { left: 36% !important; }
+      .awards-float span:nth-child(5) { left: 50% !important; }
     }
   </style>
 </body>
