@@ -165,7 +165,7 @@
 			        <div class="edu-line">
 			          <span class="news-date-badge">Sept. 2023-June. 2027</span>
 			          <strong class="edu-name">University of Surrey</strong>
-			          <span class="edu-chip">📍 Guildford, UK</span>
+			          <span class="edu-chip">📍 Dalian, China</span>
 			        </div>
 			        <div class="edu-meta">
 			          <strong>Major:</strong>&nbsp;&nbsp; Finance &amp; Accounting &nbsp;|&nbsp; <span class="gpa-chip">GPA 73.38 / 100</span>
@@ -266,7 +266,7 @@
 			    <p class="res-desc">Research focus: nanoparticle-based drug delivery systems, alongside biomedical technology transfer and business competitions.</p>
 			    <ul>
 			      <li><strong>Participated in self-assembled nanoparticle project:</strong> Constructed GA/MAP-based self-assembled nanoparticle systems for alleviating lung–kidney inflammation — designed concentration gradients and component ratios, screened formulations and conditions, and obtained a stable particle-forming parameter window with a preliminary optimization pathway.</li>
-			      <li><strong>Biotech commercialization &amp; business competitions:</strong> Participated in biomedical technology-transfer and commercialization projects (e.g., AI-enabled nanomedicine and drug discovery), translating research outcomes into commercialization strategies, and competed in multiple business and innovation contests with provincial-level awards.</li>
+			      <li><strong>Biotech commercialization &amp; business competitions:</strong> Participated in biomedical technology-transfer and commercialization projects (e.g., an AI-driven drug development project), translating research into commercialization strategies, and competed in business competitions.</li>
 			    </ul>
 			    <div class="res-tags">
 			      <span>Nanomedicine</span><span>Self-Assembly</span><span>Drug Delivery</span><span>AI for Drug Discovery</span>
@@ -846,6 +846,7 @@
         flex-direction: column-reverse;
       }
       td img[alt="Fang Ruoya"] {
+        display: block !important;
         width: 55% !important;
         max-width: 230px !important;
         margin: 0 auto 14px !important;
@@ -869,7 +870,9 @@
       .intern-card { padding-left: 36px; }
       .intern-wrap::before { left: 11px; }
       .intern-dot { left: 5px; }
-      .intern-logo { height: 44px !important; max-width: 160px !important; }
+      .intern-line1 { flex-wrap: nowrap; align-items: flex-start; }
+      .intern-line1 strong { flex: 1 1 auto; min-width: 0; }
+      .intern-logo { height: 44px !important; max-width: 160px !important; flex-shrink: 0; margin-top: 3px; }
 
       /* 8. 漂浮动画区高度略降 */
       .awards-float { height: 80px; }
