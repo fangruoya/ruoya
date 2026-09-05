@@ -827,5 +827,54 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>
+  <style>
+    /* ---- 手机端适配 ---- */
+    html, body { overflow-x: hidden; }
+
+    @media (max-width: 700px) {
+      /* 1. 所有表格区块改为纵向堆叠 */
+      table.page-section, table.page-section tbody,
+      table.page-section tr, table.page-section td {
+        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      /* 2. 头像移到最上方并居中 */
+      #about > tbody > tr > td > table > tbody > tr {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      td img[alt="Fang Ruoya"] {
+        width: 55% !important;
+        max-width: 230px !important;
+        margin: 0 auto 14px !important;
+      }
+
+      /* 3. 联系方式居中、长串可换行 */
+      .contact-links { text-align: center; }
+      .contact-links a { overflow-wrap: anywhere; }
+
+      /* 4. 项目卡片：减小左侧序号占位 */
+      .proj-card { padding: 14px 14px 14px 48px !important; }
+      .proj-num { left: 9px; top: 14px; width: 28px; height: 28px; }
+
+      /* 5. 研究卡片内边距收紧 */
+      .res-card { padding: 16px 16px 14px !important; }
+
+      /* 6. 教育卡片紧凑 */
+      .edu-card { padding: 12px 14px 12px 18px !important; gap: 12px; }
+
+      /* 7. 实习时间轴缩进减小、logo 适当缩小 */
+      .intern-card { padding-left: 36px; }
+      .intern-wrap::before { left: 11px; }
+      .intern-dot { left: 5px; }
+      .intern-logo { height: 44px !important; max-width: 160px !important; }
+
+      /* 8. 漂浮动画区高度略降 */
+      .awards-float { height: 80px; }
+      .awards-float span { top: 30px; }
+    }
+  </style>
 </body>
 </html>
