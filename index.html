@@ -346,7 +346,7 @@
 			    padding: 2px 9px; border-radius: 12px; white-space: nowrap;
 			  }
 			  .hl-num { color: #ad7020; font-weight: bold; }
-			  .intern-logo { height: 22px; max-width: 110px; object-fit: contain; margin-left: auto; }
+			  .intern-logo { height: 34px; max-width: 160px; object-fit: contain; margin-left: auto; }
 			  .intern-card ul { margin: 8px 0 0; padding-left: 18px; color: #333; }
 			  .intern-card li { margin: 5px 0; }
 			</style>
@@ -358,7 +358,7 @@
 			        <div class="intern-line1">
 			          <span class="news-date-badge">Feb. 2026 – Apr. 2026</span>
 			          <strong>Guangzhou Kaide Yuehao Private Equity Fund Management Co., Ltd.</strong>
-			          <img class="intern-logo" src="images/kdyh.jpg" alt="Kaide Yuehao">
+			          <img class="intern-logo" src="images/kdyh.png" alt="Kaide Yuehao">
 			        </div>
 			        <div class="intern-line2">
 			          <span class="intern-role">Investment Department Intern</span>
@@ -376,7 +376,7 @@
 			        <div class="intern-line1">
 			          <span class="news-date-badge">Jul. 2025 – Sept. 2025</span>
 			          <strong>Huanlejia Food Group Co., Ltd. (300997)</strong>
-			          <img class="intern-logo" src="images/hlj.jpg" alt="Huanlejia">
+			          <img class="intern-logo" src="images/hlj.png" alt="Huanlejia">
 			        </div>
 			        <div class="intern-line2">
 			          <span class="intern-role">E-commerce Operations Intern</span>
@@ -445,11 +445,11 @@
 			    padding: 2px 9px; border-radius: 12px; white-space: nowrap;
 			  }
 			  .proj-sub {
-			    margin-top: 12px; font-size: 12px; font-weight: bold;
+			    margin-top: 10px; font-size: 12px; font-weight: bold;
 			    color: #ad7020; letter-spacing: .8px; text-transform: uppercase;
 			  }
 			  .proj-sub::before { content: "◆ "; font-size: 9px; vertical-align: 1px; }
-			  .proj-para { margin: 5px 0 0; color: #444; font-size: 13.5px; line-height: 1.7; }
+			  .proj-para { margin: 4px 0 0; color: #444; font-size: 13.5px; line-height: 1.7; }
 			  /* ---- AI 药物发现流程图 ---- */
 			  .pipe-box {
 			    margin-top: 4px;
@@ -471,8 +471,8 @@
 			  .pipe-step-title { font-size: 10.5px; font-weight: bold; color: #ad7020; letter-spacing: .5px; }
 			  .pipe-step p { margin: 5px 0 0; font-size: 11px; color: #555; line-height: 1.5; }
 			  .pipe-arrow { align-self: center; color: #ad7020; font-size: 17px; font-weight: bold; flex-shrink: 0; }
-			  .proj-overview-row { display: flex; align-items: flex-start; gap: 18px; margin-top: 4px; }
-			  .proj-overview-row .proj-text { flex: 1; min-width: 0; }
+			  .proj-body { display: flex; align-items: flex-start; gap: 18px; margin-top: 4px; }
+			  .proj-body .proj-main { flex: 1; min-width: 0; }
 			  .proj-img-slot {
 			    width: 148px; flex-shrink: 0;
 			    aspect-ratio: 1 / 1;
@@ -486,10 +486,10 @@
 			    .pipe-flow { flex-direction: column; }
 			    .pipe-arrow { transform: rotate(90deg); }
 			    .pipe-step { min-width: 0; }
-			    .proj-overview-row { flex-direction: column; }
+			    .proj-body { flex-direction: column; }
 			    .proj-img-slot { width: 100%; aspect-ratio: 16 / 6; }
 			  }
-			  .proj-card ul { margin: 8px 0 0; padding-left: 18px; color: #333; }
+			  .proj-card ul { margin: 6px 0 0; padding-left: 18px; color: #333; }
 			  .proj-card li { margin: 5px 0; }
 			</style>
 
@@ -501,20 +501,20 @@
 			        <span class="proj-chip">Biomedicine</span>
 			        <span class="proj-chip">Invest First, Equity Later Program</span>
 			      </div>
-			      <div class="proj-overview-row">
-			        <div class="proj-text">
+			      <div class="proj-body">
+			        <div class="proj-main">
 			          <div class="proj-sub" style="margin-top:0;">Project Overview</div>
 			          <p class="proj-para">Commercializing an AI-enabled cysteine (Cys)-based nanocarrier platform for precision cancer therapy: AI-assisted material optimization + GSH-responsive polymeric nanocarriers, with pancreatic cancer as the first therapeutic indication.</p>
+			          <div class="proj-sub">My Contribution</div>
+			          <ul>
+			            <li>Built financial &amp; commercialization frameworks for the startup, with industry landscape analysis and market intelligence to support strategy.</li>
+			            <li>Translated scientific innovation into business narratives for technology transfer.</li>
+			          </ul>
 			        </div>
 			        <div class="proj-img-slot">
 			          <img src="images/project2.png" alt="AI-Enabled Cys-Based Nanocarrier Platform">
 			        </div>
 			      </div>
-			      <div class="proj-sub">My Contribution</div>
-			      <ul>
-			        <li>Built financial &amp; commercialization frameworks for the startup, with industry landscape analysis and market intelligence to support strategy.</li>
-			        <li>Translated scientific innovation into business narratives for technology transfer.</li>
-			      </ul>
 			    </div>
 			    <div class="proj-card">
 			      <span class="proj-num">02</span>
@@ -522,20 +522,20 @@
 			        <strong>AI-Driven Metabolic Remodeling Agent Development</strong>
 			        <span class="proj-chip">AI + Pharma</span>
 			      </div>
-			      <div class="proj-overview-row">
-			        <div class="proj-text">
+			      <div class="proj-body">
+			        <div class="proj-main">
 			          <div class="proj-sub" style="margin-top:0;">Project Overview</div>
 			          <p class="proj-para">AI-discovered metabolic remodeling agent <strong>Velmit</strong> for obesity and metabolic disorders — unlike GLP-1 therapies that mainly curb appetite, it reshapes metabolic homeostasis via lipid metabolism, mitochondrial function, and energy pathways. Positioned as a GLP-1 complement, with potential in combination therapy and long-term metabolic management.</p>
+			          <div class="proj-sub">My Contribution</div>
+			          <ul>
+			            <li>Analyzed clinical needs, market opportunities, and translational potential to support commercialization strategy.</li>
+			            <li>Supported business planning &amp; investor communications; evaluated application scenarios and strategic positioning.</li>
+			          </ul>
 			        </div>
 			        <div class="proj-img-slot">
 			          <img src="images/project1.png" alt="AI-Driven Metabolic Remodeling Agent">
 			        </div>
 			      </div>
-			      <div class="proj-sub">My Contribution</div>
-			      <ul>
-			        <li>Analyzed clinical needs, market opportunities, and translational potential to support commercialization strategy.</li>
-			        <li>Supported business planning &amp; investor communications; evaluated application scenarios and strategic positioning.</li>
-			      </ul>
 			      <div class="pipe-box">
 			        <div class="proj-sub" style="margin-top:0;">AI Drug Discovery Pipeline</div>
 			        <div class="pipe-flow">
