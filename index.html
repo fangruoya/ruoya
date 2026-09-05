@@ -84,7 +84,7 @@
 
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <img style="width:68%;max-width:62%;border-radius:8px;margin-left:7%;" alt="Fang Ruoya" src="images/template/fangruoya.jpg">
+              <img style="width:78%;max-width:72%;border-radius:8px;margin-left:7%;" alt="Fang Ruoya" src="images/template/fangruoya.jpg">
             </td>
           </tr>
         </tbody></table>
@@ -114,8 +114,8 @@
 			    background: linear-gradient(180deg, #ad7020, #e8b46a);
 			  }
 			  .edu-card:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(173,112,32,0.12); }
-			  .edu-logo { width: 88px; height: 88px; object-fit: contain; flex-shrink: 0; }
-			  @media (max-width: 600px) { .edu-logo { width: 64px; height: 64px; } }
+			  .edu-logo { width: 108px; height: 108px; object-fit: contain; flex-shrink: 0; }
+			  @media (max-width: 600px) { .edu-logo { width: 78px; height: 78px; } }
 			  .edu-main { flex: 1; min-width: 0; }
 			  .edu-line { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 			  .edu-name { font-size: 15.5px; }
@@ -308,7 +308,7 @@
 			    padding: 2px 9px; border-radius: 12px; white-space: nowrap;
 			  }
 			  .hl-num { color: #ad7020; font-weight: bold; }
-			  .intern-logo { height: 34px; max-width: 160px; object-fit: contain; margin-left: auto; }
+			  .intern-logo { height: 44px; max-width: 200px; object-fit: contain; margin-left: auto; }
 			  .intern-card ul { margin: 8px 0 0; padding-left: 18px; color: #333; }
 			  .intern-card li { margin: 5px 0; }
 			</style>
@@ -575,7 +575,41 @@
 			  .comp-list { margin: 10px 0 0; padding-left: 16px; color: #555; font-size: 12px; line-height: 1.55; }
 			  .comp-list li { margin: 6px 0; }
 			  .comp-list strong { color: #333; }
+						/* ---- 奖项漂浮动画 ---- */
+			.awards-float {
+			  position: relative; height: 92px; margin: 6px 2px 12px; overflow: hidden;
+			  background: radial-gradient(ellipse at 50% 50%, rgba(251,165,36,0.10), transparent 70%);
+			  border-radius: 14px;
+			}
+			.awards-float span {
+			  position: absolute; top: 34px; white-space: nowrap;
+			  font-size: 12px; font-weight: bold; color: #6e3519;
+			  background: rgba(251,165,36,0.12);
+			  border: 1px solid rgba(173,112,32,0.35);
+			  padding: 4px 12px; border-radius: 999px;
+			  opacity: 0; transform: translateY(110px);
+			  animation: awardFloat 8s linear infinite; pointer-events: none;
+			}
+			@keyframes awardFloat {
+			  0%   { transform: translateY(110px);  opacity: 0; }
+			  18%  { opacity: .55; }
+			  50%  { transform: translateY(0); opacity: 1; }
+			  82%  { opacity: .55; }
+			  100% { transform: translateY(-110px); opacity: 0; }
+			}
+			@media (max-width: 640px) { .awards-float span { font-size: 10.5px; padding: 3px 9px; } }
+			@media (prefers-reduced-motion: reduce) { .awards-float span { animation: none; opacity: .85; transform: none; } }
 			</style>
+
+			  <div class="awards-float" aria-hidden="true">
+			    <span style="left:3%;  animation-duration:8s;   animation-delay:-1s;">CGMA Business Elite Challenge</span>
+			    <span style="left:14%; animation-duration:7s;   animation-delay:-4s;">Financial Big Data · Provincial 1st</span>
+			    <span style="left:28%; animation-duration:9s;   animation-delay:-6s;">E-commerce Challenge · 1st Prize</span>
+			    <span style="left:42%; animation-duration:7.5s; animation-delay:-2.5s;">Sports Culture Innovation Award</span>
+			    <span style="left:56%; animation-duration:8.5s; animation-delay:-5s;">Yongda Cup · 2nd Prize</span>
+			    <span style="left:70%; animation-duration:7s;   animation-delay:-0.5s;">IMA Accounting · 3rd Prize</span>
+			    <span style="left:83%; animation-duration:9s;   animation-delay:-3s;">ICH Revitalization Award</span>
+			  </div>
 
 			  <div class="project-grid">
 			    <div class="project-card">
@@ -614,6 +648,7 @@
 			        <li><strong>University 1st Prize</strong> — 3rd Liaoning Provincial College Student Sports Culture &amp; Health Promotion Innovation and Entrepreneurship Competition (2024)</li>
 			        <li><strong>University 2nd Prize</strong> — "Yongda Cup" China International College Students' Innovation Competition (2025)</li>
 			        <li><strong>University 3rd Prize</strong> — IMA (14th) Campus Management Accounting Competition</li>
+			        <li style="list-style:none;color:#ad7020;font-size:15px;letter-spacing:3px;">……</li>
 			      </ul>
 			    </div>
 			  </div>
